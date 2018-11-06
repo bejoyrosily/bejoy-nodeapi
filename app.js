@@ -34,6 +34,18 @@ const db = mongoose.connect(url,
 //     console.log('connection successful');
 // });
 
+app.get('/',(req,res)=>{
+    // console.log("received ...");
+    qrs.
+    find({})
+    .then(doc =>{
+        res.send(doc);
+    })
+    .catch(err=>{
+        console.error(err);
+    })
+})
+
 app.get('/api/questions',(req,res)=>{
     // console.log("received ...");
     qrs.
